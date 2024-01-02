@@ -1,0 +1,38 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style_auth.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="signup-container">
+      <a href="index.html" class="back-btn">&larr; Back</a>
+      <h1>Sign Up</h1>
+      <form action="http://localhost:3000/signup" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="showPassword">Show Password:</label>
+        <input type="checkbox" id="showPassword" name="showPassword" />
+
+        <div class="options">
+          <p>Sign Up using:</p>
+          <a href="#">Gmail</a>
+          <a href="#">Facebook</a>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+    <script src="script_auth.js"></script>
+  </body>
+</html>

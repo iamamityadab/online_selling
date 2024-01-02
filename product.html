@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shop - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mobile Shop</h1>
+        <nav>
+            <a href="product.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <div id="featured-products"></div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Your React component and rendering logic -->
+    <script type="text/babel">
+        // Define the ProductCard component
+        const ProductCard = ({ image, name, description, details, price }) => (
+            <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div className="card product-card">
+                    <img src={image} alt={name} className="card-img-top" />
+                    <div className="card-body">
+                        <h5 className="card-title">{name}</h5>
+                        <p className="card-text">Description: {description}</p>
+                        <p className="card-text">Details: {details}</p>
+                        <p className="card-text">Price: {price}</p>
+                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-success ml-2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        );
+
+        // Sample product data
+        const mobilePhones = [
+  { image: "image/img1.jpg", name: "Mobile 1", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img2.jpg", name: "Mobile 2", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img3.jpg", name: "Mobile 3", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img4.jpg", name: "Mobile 4", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img5.jpg", name: "Mobile 5", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img1.jpg", name: "Mobile 1", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img2.jpg", name: "Mobile 2", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img3.jpg", name: "Mobile 3", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img4.jpg", name: "Mobile 4", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img5.jpg", name: "Mobile 5", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img1.jpg", name: "Mobile 1", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img2.jpg", name: "Mobile 2", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img3.jpg", name: "Mobile 3", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img4.jpg", name: "Mobile 4", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img5.jpg", name: "Mobile 5", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img1.jpg", name: "Mobile 1", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img2.jpg", name: "Mobile 2", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img3.jpg", name: "Mobile 3", description: "Description 1", details: "Details 1", price: "$599.99" },
+  { image: "image/img4.jpg", name: "Mobile 4", description: "Description 2", details: "Details 2", price: "$799.99" },
+  { image: "image/img5.jpg", name: "Mobile 5", description: "Description 2", details: "Details 2", price: "$799.99" }
+];
+
+        // Render the product cards using React
+        const productsSection = document.getElementById('featured-products');
+        ReactDOM.render(
+            <div className="row justify-content-center">
+                {mobilePhones.map((phone, index) => (
+                    <ProductCard key={index} {...phone} />
+                ))}
+            </div>,
+            productsSection
+        );
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <form id="contact-form" action="/contact" method="POST" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+
+</html>

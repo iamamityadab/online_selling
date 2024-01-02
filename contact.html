@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shop - Contact</title>
+    <link rel="stylesheet" href="style_contact.css">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body class="contact-body">
+    <header class="contact-header">
+        <h1>Mobile Shop</h1>
+        <nav>
+            <a href="product.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p class="contact-text">Have questions or suggestions? Reach out to us using the form below.</p>
+    </section>
+
+    <form id="contact-form" action="/contact" method="POST" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <div class="email-box">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="contact-button">Submit</button>
+    </form>
+    
+
+    <script>
+    </script>
+</body>
+
+</html>

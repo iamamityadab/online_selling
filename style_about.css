@@ -1,0 +1,61 @@
+
+.about-body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.about-header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+.about-section {
+  text-align: center;
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.owner-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owner-image {
+  max-width: 150px; 
+  border-radius: 50%; 
+  margin-right: 20px;
+}
+
+.owner-info {
+  max-width: 600px;
+  text-align: left;
+}
+
+.owner-info h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.owner-info p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+
